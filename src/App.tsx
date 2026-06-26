@@ -83,79 +83,93 @@ export default function App() {
               className="space-y-24 pb-16"
             >
               {/* Home Hero Section */}
-              <section className="relative h-[85vh] w-full bg-stone-900 overflow-hidden flex items-center justify-start px-6 md:px-12 lg:px-24">
-                {/* Background Video */}
-                <video
-                  id="hero-video"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 object-cover w-full h-full opacity-50 scale-100 transition-transform duration-[10000ms] ease-out hover:scale-105"
-                  poster="/images/nursery.png"
-                >
-                  <source
-                    src="/videos/hero.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-
-                {/* Custom gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/45 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-transparent to-transparent" />
-
-                <div className="relative z-10 max-w-2xl text-stone-100 space-y-6">
-                  <span className="font-sans text-[11px] tracking-[0.35em] text-amber-500 font-semibold uppercase block">
-                    Established Geneva, 1912
-                  </span>
-                  <h1 className="font-serif text-4xl md:text-6xl text-stone-100 tracking-wider font-light leading-tight uppercase">
-                    Where Nobility <br />
-                    Meets Devotion
-                  </h1>
-                  <p className="text-xs md:text-sm text-stone-300 font-light max-w-lg leading-relaxed tracking-wide">
-                    Elevating the bond between exceptionally bred, hand-reared puppies and distinguished global guardians. Every placement is a work of physical, behavioral, and emotional craftsmanship.
-                  </p>
-                  <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                    <button
-                      onClick={() => setActiveTab('companions')}
-                      className="px-8 py-3.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-                    >
-                      Discover Placements <ChevronRight size={14} />
-                    </button>
-                    <button
-                      onClick={() => setActiveTab('experience')}
-                      className="px-8 py-3.5 bg-transparent hover:bg-stone-100 hover:text-stone-900 text-stone-100 border border-stone-100 text-xs tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
-                    >
-                      The Couture Experience
-                    </button>
+              <section className="relative min-h-[85vh] lg:h-[85vh] w-full bg-stone-950 overflow-hidden flex items-center px-6 md:px-12 lg:px-24 py-16 lg:py-0 border-b border-stone-900">
+                {/* Background decorative gradient */}
+                <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-amber-600/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-12 left-12 w-[300px] h-[300px] bg-stone-900/40 rounded-full blur-[80px] pointer-events-none" />
+                
+                <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                  
+                  {/* Left Column: Text Content */}
+                  <div className="lg:col-span-7 text-stone-100 space-y-6 text-left">
+                    <span className="font-sans text-[11px] tracking-[0.35em] text-amber-500 font-semibold uppercase block">
+                      Established Geneva, 1912
+                    </span>
+                    <h1 className="font-serif text-4xl md:text-6xl text-stone-100 tracking-wider font-light leading-tight uppercase">
+                      Where Nobility <br />
+                      Meets Devotion
+                    </h1>
+                    <p className="text-xs md:text-sm text-stone-300 font-light max-w-lg leading-relaxed tracking-wide">
+                      Elevating the bond between exceptionally bred, hand-reared puppies and distinguished global guardians. Every placement is a work of physical, behavioral, and emotional craftsmanship.
+                    </p>
+                    <div className="pt-6 flex flex-col sm:flex-row gap-4">
+                      <button
+                        onClick={() => setActiveTab('companions')}
+                        className="px-8 py-3.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        Discover Placements <ChevronRight size={14} />
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('experience')}
+                        className="px-8 py-3.5 bg-transparent hover:bg-stone-900 hover:text-stone-100 text-stone-300 border border-stone-800 hover:border-stone-700 text-xs tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
+                      >
+                        The Couture Experience
+                      </button>
+                    </div>
                   </div>
+
+                  {/* Right Column: Portrait Video Showcase */}
+                  <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div className="relative w-full max-w-[300px] aspect-[9/16] bg-stone-900 border border-stone-800 p-2 shadow-2xl rounded-sm animate-float">
+                      {/* Gold framing border */}
+                      <div className="absolute inset-0 border border-amber-600/10 pointer-events-none rounded-sm" />
+                      
+                      <div className="w-full h-full overflow-hidden relative rounded-sm bg-stone-950">
+                        <video
+                          id="hero-video"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="object-cover w-full h-full"
+                          poster="/images/nursery.png"
+                        >
+                          <source
+                            src="/videos/hero.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+                      {/* Video Control badge */}
+                      <button
+                        onClick={() => {
+                          const video = document.getElementById('hero-video') as HTMLVideoElement;
+                          if (video) {
+                            if (video.paused) {
+                              video.play();
+                            } else {
+                              video.pause();
+                            }
+                          }
+                        }}
+                        className="absolute bottom-6 right-6 z-20 flex items-center gap-2 px-3 py-1.5 bg-stone-950/90 hover:bg-stone-950 text-stone-200 border border-stone-800 rounded-full transition-all text-[9px] uppercase tracking-widest cursor-pointer shadow-lg"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                        Ambient Motion
+                      </button>
+                    </div>
+                  </div>
+
                 </div>
 
                 {/* Bottom luxury values ribbon */}
-                <div className="absolute bottom-6 left-6 md:left-12 lg:left-24 right-6 z-10 flex justify-between items-center text-[10px] tracking-widest text-stone-400 font-light">
+                <div className="absolute bottom-6 left-6 md:left-12 lg:left-24 right-6 z-10 flex justify-between items-center text-[10px] tracking-widest text-stone-500 font-light">
                   <div className="hidden sm:flex gap-8">
-                    <span className="flex items-center gap-2"><Lock size={12} className="text-amber-600" /> CONFIDENTIAL FILES</span>
-                    <span className="flex items-center gap-2"><Star size={12} className="text-amber-600" /> 100% PURITY & HEALTH ACCREDITED</span>
+                    <span className="flex items-center gap-2"><Lock size={12} className="text-amber-600/70" /> CONFIDENTIAL FILES</span>
+                    <span className="flex items-center gap-2"><Star size={12} className="text-amber-600/70" /> 100% PURITY & HEALTH ACCREDITED</span>
                   </div>
-                  
-                  {/* Subtle video pause/play trigger */}
-                  <button
-                    onClick={() => {
-                      const video = document.getElementById('hero-video') as HTMLVideoElement;
-                      if (video) {
-                        if (video.paused) {
-                          video.play();
-                        } else {
-                          video.pause();
-                        }
-                      }
-                    }}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-stone-950/80 hover:bg-stone-950 text-stone-200 border border-stone-800 rounded-full transition-all text-[9px] uppercase tracking-widest cursor-pointer ml-auto"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
-                    Ambient Motion
-                  </button>
                 </div>
               </section>
 
