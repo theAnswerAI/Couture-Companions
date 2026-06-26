@@ -34,7 +34,7 @@ export default function ExperienceView({ onApply }: ExperienceViewProps) {
       {/* Cinematic Banner */}
       <section className="relative h-[65vh] w-full bg-stone-900 overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=90"
+          src="/images/nursery.png"
           alt="Luxury living salon"
           referrerPolicy="no-referrer"
           className="absolute inset-0 object-cover w-full h-full opacity-40"
@@ -119,7 +119,7 @@ export default function ExperienceView({ onApply }: ExperienceViewProps) {
           <div className="space-y-4">
             <div className="aspect-[4/5] overflow-hidden border border-stone-200 bg-stone-100">
               <img
-                src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80"
+                src="/images/genevieve.png"
                 alt="Puppy lifestyle"
                 referrerPolicy="no-referrer"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
@@ -127,7 +127,7 @@ export default function ExperienceView({ onApply }: ExperienceViewProps) {
             </div>
             <div className="aspect-square overflow-hidden border border-stone-200 bg-stone-100">
               <img
-                src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=800&q=80"
+                src="/images/seraphina.png"
                 alt="Pristine dog walking"
                 referrerPolicy="no-referrer"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
@@ -137,7 +137,7 @@ export default function ExperienceView({ onApply }: ExperienceViewProps) {
           <div className="space-y-4 pt-8">
             <div className="aspect-square overflow-hidden border border-stone-200 bg-stone-100">
               <img
-                src="https://images.unsplash.com/photo-1513360309081-36f5e878fc9e?auto=format&fit=crop&w=800&q=80"
+                src="/images/balthazar.png"
                 alt="Companion sleeping elegant"
                 referrerPolicy="no-referrer"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
@@ -145,7 +145,7 @@ export default function ExperienceView({ onApply }: ExperienceViewProps) {
             </div>
             <div className="aspect-[4/5] overflow-hidden border border-stone-200 bg-stone-100">
               <img
-                src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80"
+                src="/images/aurelia.png"
                 alt="Aurelia playing"
                 referrerPolicy="no-referrer"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"

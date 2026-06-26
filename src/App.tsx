@@ -92,10 +92,10 @@ export default function App() {
                   muted
                   playsInline
                   className="absolute inset-0 object-cover w-full h-full opacity-50 scale-100 transition-transform duration-[10000ms] ease-out hover:scale-105"
-                  poster="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1600&q=90"
+                  poster="/images/nursery.png"
                 >
                   <source
-                    src="https://assets.mixkit.co/videos/preview/mixkit-aerial-shot-of-a-mansion-surrounded-by-nature-41584-large.mp4"
+                    src="/videos/hero.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -262,7 +262,7 @@ export default function App() {
                   </div>
                   <div className="aspect-[16/10] overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl relative">
                     <img
-                      src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
+                      src="/images/nursery.png"
                       alt="Swiss estate nursery salon"
                       referrerPolicy="no-referrer"
                       className="object-cover w-full h-full opacity-80"
@@ -479,12 +479,12 @@ export default function App() {
                     Companion Couture was founded in Geneva in the winter of 1912 by Baroness Helena von Closen. Refusing to allow the magnificent working dog lineages of Europe to decline, she established a private sanctuary in the Swiss Alps to preserve genetic health and nurture noble temperaments.
                   </p>
                   <p className="text-xs md:text-sm text-stone-600 leading-relaxed font-light tracking-wide">
-                    Over the decades, our breeding line has grown to include the most celebrated companion breeds, from noble retrievers and swift sighthounds to rare toy poodles. Today, we maintain the same commitment: raising each companion with deep intellectual care and locating guardians who value life as a sacred masterpiece.
+                    Over the decades, our breeding line has grown to include our carefully curated signature collection: from majestic Pomskies and elegant Pomeranians to timeless Maltese companions. Today, we maintain the same commitment: raising each companion with deep intellectual care and locating guardians who value life as a sacred masterpiece.
                   </p>
                 </div>
                 <div className="aspect-[4/5] bg-stone-100 overflow-hidden border border-stone-200">
                   <img
-                    src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&h=1000&q=80"
+                    src="/images/baroness.png"
                     alt="Helena von Closen vintage estate style"
                     referrerPolicy="no-referrer"
                     className="object-cover w-full h-full"
@@ -504,7 +504,7 @@ export default function App() {
                   <div className="border border-stone-200/60 bg-white p-6 space-y-4">
                     <div className="aspect-[16/10] overflow-hidden bg-stone-100">
                       <img
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&h=800&q=80"
+                        src="/images/nursery.png"
                         alt="Geneva private estate"
                         referrerPolicy="no-referrer"
                         className="object-cover w-full h-full"
@@ -521,7 +521,7 @@ export default function App() {
                   <div className="border border-stone-200/60 bg-white p-6 space-y-4">
                     <div className="aspect-[16/10] overflow-hidden bg-stone-100">
                       <img
-                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&h=800&q=80"
+                        src="/images/palm_beach.png"
                         alt="Palm Beach villa"
                         referrerPolicy="no-referrer"
                         className="object-cover w-full h-full"
